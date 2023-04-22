@@ -1,0 +1,7 @@
+type Subscription {
+  slideChanged(presentationId: ID!): Silde
+}
+
+type Silde {
+  slide: Int!
+}

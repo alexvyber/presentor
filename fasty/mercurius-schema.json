@@ -1,0 +1,6 @@
+[
+  "type Mutation {\n  slideChange(presentationId: ID!, slide: Int!): Boolean!\n}",
+  "type Query {\n  hello(id: ID!): String!\n}",
+  "type Subscription {\n  slideChanged(presentationId: ID!): Silde\n}\n\ntype Silde {\n  slide: Int!\n}",
+  "type Presentation {\n  id: ID!\n  slides: Int!\n  current: Int!\n}"
+]

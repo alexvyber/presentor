@@ -1,0 +1,5 @@
+type Presentation {
+  id: ID!
+  slides: Int!
+  current: Int!
+}

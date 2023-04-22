@@ -1,0 +1,45 @@
+{
+  "name": "fasty",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with Fastify-CLI.",
+  "main": "app.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run build:ts && tsc -p test/tsconfig.json && tap --ts \"test/**/*.test.ts\"",
+    "start": "npm run build:ts && fastify start -l info dist/app.js",
+    "build:ts": "tsc",
+    "watch:ts": "tsc -w",
+    "dev": "npm run build:ts && concurrently -k -p \"[{name}]\" -n \"TypeScript,App\" -c \"yellow.bold,cyan.bold\" \"npm:watch:ts\" \"npm:dev:start\"",
+    "dev:start": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js --port 5000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/autoload": "^5.7.1",
+    "@fastify/sensible": "^5.2.0",
+    "fastify": "^4.15.0",
+    "fastify-cli": "^5.7.1",
+    "fastify-plugin": "^4.5.0",
+    "graphql": "^16.6.0",
+    "mercurius": "^12.2.0",
+    "mercurius-codegen": "^5.0.2"
+  },
+  "devDependencies": {
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@types/node": "^18.15.11",
+    "@types/tap": "^15.0.8",
+    "bob-tsm": "^1.1.2",
+    "concurrently": "^8.0.1",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.17.17",
+    "fastify-tsconfig": "^1.0.1",
+    "mercurius-integration-testing": "^8.0.0",
+    "prettier": "^2.8.7",
+    "tap": "^16.3.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}

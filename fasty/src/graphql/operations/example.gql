@@ -1,0 +1,9 @@
+mutation slideChange($presentationId: ID!, $slide: Int!) {
+  slideChange(presentationId: $presentationId, slide: $slide)
+}
+
+subscription slideChanged($presentationId: ID!) {
+  slideChanged(presentationId: $presentationId) {
+    slide
+  }
+}

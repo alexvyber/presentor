@@ -1,0 +1,101 @@
+.background {
+  grid-row: 1/-4;
+}
+
+.StripeGrid {
+  --stripe-height: 48px;
+  --content-columns: 12;
+  --gutter-columns: 4;
+  position: absolute;
+  width: calc(100% + 1rem);
+  top: 0;
+  /* bottom: 0; */
+  z-index: -1;
+  pointer-events: none;
+  margin: auto -1rem;
+}
+
+@media (min-width: 1000px) {
+  .StripeGrid {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 640px) {
+  .StripeGrid {
+    --stripe-height: 64px;
+  }
+}
+
+.backgroundContainer,
+.stripeContainer {
+  /* display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: skewY(-10deg);
+  transform: skewY(-10deg); */
+
+  @apply absolute flex h-full w-full -skew-y-[10deg] flex-col items-center align-middle;
+}
+
+.StripeGrid .backgroundContainer .grid {
+  grid-template-columns: 1fr;
+  min-width: 0;
+}
+
+.background {
+  grid-column: 1/-1;
+  z-index: -1;
+}
+
+/* .StripeGrid .stripeContainer {
+  overflow: hidden;
+} */
+
+.StripeGrid > .backgroundContainer,
+.StripeGrid > .stripeContainer {
+  /* -webkit-box-pack: end; */
+  /* -ms-flex-pack: end; */
+  /* justify-content: flex-end; */
+  @apply flex justify-end;
+}
+
+.StripeGrid .backgroundContainer > .grid,
+.StripeGrid .stripeContainer > .grid {
+  height: 200%;
+  /* -ms-flex-line-pack: end; */
+  /* align-content: end; */
+}
+
+.StripeGrid .grid {
+  --content-column-width: minmax(0, calc(1040px / var(--content-columns)));
+  --gutter-column-width: 1fr;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, var(--stripe-height));
+  grid-template-columns:
+    [viewport-start] 1fr [left-gutter-start] repeat(var(--gutter-columns), var(--gutter-column-width))
+    [left-gutter-end content-start] repeat(var(--content-columns), var(--content-column-width))
+    [content-end right-gutter-start] repeat(var(--gutter-columns), var(--gutter-column-width))
+    [right-gutter-end] 1fr [viewport-end];
+}
+
+@media (min-width: 1040px) {
+  .StripeGrid .grid {
+    --gutter-column-width: var(--content-column-width);
+    min-width: calc(1040px / var(--content-columns) * (var(--gutter-columns) * 2 + var(--content-columns)));
+  }
+}
