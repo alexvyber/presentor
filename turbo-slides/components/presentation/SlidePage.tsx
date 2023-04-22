@@ -10,6 +10,27 @@ import { useCurrentSlide } from '@/lib/context/CurrentSlideContext'
 import { PRESENTATION_MODES } from '@/lib/constants'
 import { Button } from '../katzen/ui/button'
 
+import { useMutation, useSubscription } from 'urql'
+
+const newMessages = `
+subscription {
+  slideChanged(presentationId: "_____") {
+    slide
+  }
+}
+`
+
+const UpdateTodo = `
+  mutation ($slide: Int!) {
+    slideChange(presentationId: "_____", slide: $slide )
+  }
+  
+`
+
+const handleSubscription = (slides = [], response) => {
+  return response.slideChanged
+}
+
 // import PresentationMode from '@/components/presentation/PresentationMode'
 // import Swipeable from '@/components/presentation/Swipeable'
 // import { useTotalPages } from '@/context/TotalPagesContext'
@@ -17,6 +38,9 @@ import { Button } from '../katzen/ui/button'
 
 export default function SlidePage({ children, next }: React.PropsWithChildren & { next: number }) {
   const { currentSlide, setSlide, steps, currentStep, setCurrentStep, clearSteps } = useCurrentSlide()
+
+  const [{ data }] = useSubscription({ query: newMessages }, handleSubscription)
+  const [result, updateSlide] = useMutation(UpdateTodo)
 
   const router = useRouter()
 
@@ -73,6 +97,14 @@ export default function SlidePage({ children, next }: React.PropsWithChildren & 
       // Otherwise go to next slide
 
       setSlide((prevState) => {
+        updateSlide({
+          slide: prevState + 1,
+        }).then((result) => {
+          // The result is almost identical to `updateTodoResult` with the exception
+          // of `result.fetching` not being set.
+          // It is an OperationResult.
+        })
+
         return prevState + 1
       })
 
@@ -83,6 +115,14 @@ export default function SlidePage({ children, next }: React.PropsWithChildren & 
 
       // Otherwise go to prev slide
       setSlide((prevState) => {
+        updateSlide({
+          slide: prevState - 1,
+        }).then((result) => {
+          // The result is almost identical to `updateTodoResult` with the exception
+          // of `result.fetching` not being set.
+          // It is an OperationResult.
+        })
+
         return prevState - 1
       })
       clearSteps()
@@ -109,6 +149,12 @@ export default function SlidePage({ children, next }: React.PropsWithChildren & 
   const swipeRight = () => {
     navigate({ keyCode: PREV })
   }
+
+  useEffect(() => {
+    if (!data) return
+
+    setSlide(data.slide)
+  }, [data])
 
   // const slideNotes = () => {
   //   let generatorCount = 0

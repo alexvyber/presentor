@@ -1,14 +1,13 @@
 import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/design'
 import classNames from 'clsx'
 import { motion } from 'framer-motion'
+import { Container } from '../Container'
 
 // import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/design'
 
 export const SignMessage = () => {
-  const classes = classNames('SignMessage', 'container mx-auto max-w-screen-xl')
-
   return (
-    <div className={classes}>
+    <Container className="py-12">
       SignMessage
       <motion.div
         initial="hidden"
@@ -23,7 +22,7 @@ export const SignMessage = () => {
             },
           },
         }}>
-        <div className="grid grid-cols-12 gap-10">
+        <div className="">
           <div className="col-span-6 text-sm text-left flex flex-col justify-center">
             <div className="">
               <motion.div className="mx-auto mt-6 " variants={FADE_DOWN_ANIMATION_VARIANTS}>
@@ -43,17 +42,9 @@ export const SignMessage = () => {
               </motion.div>
             </div>
           </div>
-          <div className="col-span-6 items-center flex flex-col justify-center">
-            <motion.div className="mx-auto mt-6 " variants={FADE_DOWN_ANIMATION_VARIANTS}>
-              <button className="btn btn-primary" onClick={() => {}}>
-                Sign Message
-              </button>
-            </motion.div>
-            <div className="mt-10">asdf</div>
-          </div>
         </div>
       </motion.div>
-    </div>
+    </Container>
   )
 }
 
