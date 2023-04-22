@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+import { Alert, AlertDescription, AlertTitle } from '@/components/katzen/ui/alert'
 
 interface CalloutProps {
   icon?: string

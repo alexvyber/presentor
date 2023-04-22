@@ -1,5 +1,5 @@
-import { Label } from '@/components/ui/label'
-import { Textarea } from '@/components/ui/textarea'
+import { Label } from '@/components/katzen/ui/label'
+import { Textarea } from '@/components/katzen/ui/textarea'
 
 export function TextareaWithLabel() {
   return (

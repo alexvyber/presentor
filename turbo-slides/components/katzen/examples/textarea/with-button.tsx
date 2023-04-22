@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button'
-import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/katzen/ui/button'
+import { Textarea } from '@/components/katzen/ui/textarea'
 
 export function TextareaWithButton() {
   return (

@@ -15,7 +15,7 @@ import {
   Users,
 } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/katzen/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,7 +29,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
+} from '@/components/katzen/ui/dropdown-menu'
 
 export function DropdownMenuDemo() {
   return (

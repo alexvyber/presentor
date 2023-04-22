@@ -5,10 +5,10 @@ import { addDays, format } from 'date-fns'
 import { Calendar as CalendarIcon } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import { Calendar } from '@/components/ui/calendar'
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Button } from '@/components/katzen/ui/button'
+import { Calendar } from '@/components/katzen/ui/calendar'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/katzen/ui/popover'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/katzen/ui/select'
 
 export function CalendarDatePickerWithPresets() {
   const [date, setDate] = React.useState<Date>()

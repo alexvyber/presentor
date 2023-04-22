@@ -1,5 +1,5 @@
-import { Label } from '@/components/ui/label'
-import { Switch } from '@/components/ui/switch'
+import { Label } from '@/components/katzen/ui/label'
+import { Switch } from '@/components/katzen/ui/switch'
 
 export function SwitchDemo() {
   return (

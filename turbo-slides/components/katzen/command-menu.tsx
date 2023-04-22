@@ -3,14 +3,14 @@
 import * as React from 'react'
 import { useRouter } from 'next/navigation'
 import { DialogProps } from '@radix-ui/react-alert-dialog'
-import { allDocs } from 'contentlayer/generated'
+// import { allDocs } from 'contentlayer/generated'
 import { Circle, File, Laptop, Moon, SunMedium } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
 import { docsConfig } from '@/config/docs'
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from '@/components/ui/command'
+import { Button } from '@/components/katzen/ui/button'
+import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from '@/components/katzen/ui/command'
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()
@@ -65,7 +65,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                 </CommandItem>
               ))}
           </CommandGroup>
-          {docsConfig.sidebarNav.map((group) => (
+          {/* {docsConfig.sidebarNav.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem) => (
                 <CommandItem
@@ -80,7 +80,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                 </CommandItem>
               ))}
             </CommandGroup>
-          ))}
+          ))} */}
           <CommandSeparator />
           <CommandGroup heading="Theme">
             <CommandItem onSelect={() => runCommand(() => setTheme('light'))}>

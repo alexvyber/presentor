@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { Slider } from '@/components/ui/slider'
+import { Slider } from '@/components/katzen/ui/slider'
 
 type SliderProps = React.ComponentProps<typeof Slider>
 

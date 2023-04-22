@@ -3,8 +3,8 @@
 import * as React from 'react'
 import { Calendar, MoreHorizontal, Tags, Trash, User } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'
+import { Button } from '@/components/katzen/ui/button'
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/katzen/ui/command'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,7 +17,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
+} from '@/components/katzen/ui/dropdown-menu'
 
 const labels = ['feature', 'bug', 'enhancement', 'documentation', 'design', 'question', 'maintenance']
 

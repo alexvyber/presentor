@@ -12,8 +12,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
-import { Icons } from '@/components/icons'
+} from '@/components/katzen/ui/navigation-menu'
+import { Icons } from '@/components/katzen/icons'
 
 const components: { title: string; href: string; description: string }[] = [
   {

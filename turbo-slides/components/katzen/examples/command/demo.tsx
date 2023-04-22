@@ -9,7 +9,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from '@/components/ui/command'
+} from '@/components/katzen/ui/command'
 
 export function CommandDemo() {
   return (

@@ -1,10 +1,10 @@
 import { BellRing, Check } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
-import { Switch } from '@/components/ui/switch'
+import { Button } from '@/components/katzen/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/katzen/ui/card'
+import { Separator } from '@/components/katzen/ui/separator'
+import { Switch } from '@/components/katzen/ui/switch'
 
 const notifications = [
   {

@@ -8,10 +8,10 @@ import { SidebarOpen } from 'lucide-react'
 import { docsConfig } from '@/config/docs'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { Icons } from '@/components/icons'
+import { Button } from '@/components/katzen/ui/button'
+import { ScrollArea } from '@/components/katzen/ui/scroll-area'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/katzen/ui/sheet'
+import { Icons } from '@/components/katzen/icons'
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)

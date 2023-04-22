@@ -5,8 +5,8 @@ import { DropdownMenuTriggerProps } from '@radix-ui/react-dropdown-menu'
 import { NpmCommands } from 'types/unist'
 
 import { cn } from '@/lib/utils'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
-import { Icons } from '@/components/icons'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/katzen/ui/dropdown-menu'
+import { Icons } from '@/components/katzen/icons'
 
 interface CopyButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   value: string

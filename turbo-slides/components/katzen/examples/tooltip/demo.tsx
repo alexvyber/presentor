@@ -1,7 +1,7 @@
 import { Plus } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { Button } from '@/components/katzen/ui/button'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/katzen/ui/tooltip'
 
 export function TooltipDemo() {
   return (

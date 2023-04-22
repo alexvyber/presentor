@@ -1,9 +1,9 @@
 import { Settings2 } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
+import { Button } from '@/components/katzen/ui/button'
+import { Input } from '@/components/katzen/ui/input'
+import { Label } from '@/components/katzen/ui/label'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/katzen/ui/popover'
 
 export function PopoverDemo() {
   return (

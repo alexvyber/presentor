@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/katzen/ui/select'
 
 export function SelectDemo() {
   return (

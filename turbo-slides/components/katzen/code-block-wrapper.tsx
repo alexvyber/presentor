@@ -3,8 +3,8 @@
 import * as React from 'react'
 
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
+import { Button } from '@/components/katzen/ui/button'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/katzen/ui/collapsible'
 
 interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {
   expandButtonTitle?: string

@@ -6,14 +6,14 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 import { NpmCommands } from 'types/unist'
 
 import { cn } from '@/lib/utils'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
-import { Callout } from '@/components/callout'
-import { CodeBlockWrapper } from '@/components/code-block-wrapper'
-import { ComponentExample } from '@/components/component-example'
-import { ComponentSource } from '@/components/component-source'
-import { CopyButton, CopyNpmCommandButton } from '@/components/copy-button'
-import { examples } from '@/components/examples'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/katzen/ui/accordion'
+import { Alert, AlertDescription, AlertTitle } from '@/components/katzen/ui/alert'
+import { Callout } from '@/components/katzen/callout'
+import { CodeBlockWrapper } from '@/components/katzen/code-block-wrapper'
+import { ComponentExample } from '@/components/katzen/component-example'
+import { ComponentSource } from '@/components/katzen/component-source'
+import { CopyButton, CopyNpmCommandButton } from '@/components/katzen/copy-button'
+import { examples } from '@/components/katzen/examples'
 
 const components = {
   Accordion,

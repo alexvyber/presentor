@@ -1,5 +1,5 @@
-import { Checkbox } from '@/components/ui/checkbox'
-import { Label } from '@/components/ui/label'
+import { Checkbox } from '@/components/katzen/ui/checkbox'
+import { Label } from '@/components/katzen/ui/label'
 
 export function LabelDemo() {
   return (

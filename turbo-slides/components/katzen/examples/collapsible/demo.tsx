@@ -3,8 +3,8 @@
 import * as React from 'react'
 import { ChevronsUpDown, Plus, X } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
+import { Button } from '@/components/katzen/ui/button'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/katzen/ui/collapsible'
 
 export function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false)

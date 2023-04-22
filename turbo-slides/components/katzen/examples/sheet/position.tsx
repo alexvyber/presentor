@@ -2,11 +2,11 @@
 
 import { useState } from 'react'
 
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
-import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
+import { Button } from '@/components/katzen/ui/button'
+import { Input } from '@/components/katzen/ui/input'
+import { Label } from '@/components/katzen/ui/label'
+import { RadioGroup, RadioGroupItem } from '@/components/katzen/ui/radio-group'
+import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from '@/components/katzen/ui/sheet'
 
 const SHEET_POSITIONS = ['top', 'right', 'bottom', 'left'] as const
 
