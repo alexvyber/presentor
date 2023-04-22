@@ -1,8 +1,13 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, createContext, useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { PRESENTATION_MODES } from '@/lib/constants'
 
-export const ModeContext = createContext({})
+type ModaContextType = {
+  mode: string
+  setMode: Dispatch<SetStateAction<string>>
+}
+
+export const ModeContext = createContext<ModaContextType>({} as ModaContextType)
 
 export function ModeProvider({ children }: React.PropsWithChildren) {
   const [mode, setMode] = useState(PRESENTATION_MODES.SLIDESHOW)

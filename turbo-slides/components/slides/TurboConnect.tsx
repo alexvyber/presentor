@@ -1,11 +1,9 @@
-import * as React from 'react'
+import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/design'
 import classNames from 'clsx'
 import { motion } from 'framer-motion'
 
-import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/design'
-
-export const TurboConnect = ({ className }) => {
-  const classes = classNames(className, 'TurboConnect', 'container mx-auto max-w-screen-xl')
+export const TurboConnect = () => {
+  const classes = classNames('TurboConnect', 'container mx-auto max-w-screen-xl')
   return (
     <div className={classes}>
       <motion.div
@@ -42,8 +40,7 @@ export const TurboConnect = ({ className }) => {
             </div>
           </div>
           <div className="col-span-6 items-center flex flex-col justify-center">
-            <motion.div className="mx-auto mt-6 " variants={FADE_DOWN_ANIMATION_VARIANTS}>
-            </motion.div>
+            <motion.div className="mx-auto mt-6 " variants={FADE_DOWN_ANIMATION_VARIANTS}></motion.div>
           </div>
         </div>
       </motion.div>

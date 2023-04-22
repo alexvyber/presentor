@@ -1,9 +1,12 @@
 // @ts-nocheck
 import { useEffect, useRef } from 'react'
 
-export default function useEventListener(eventName, handler, element) {
-  const windowEl = process.browser ? window : null
+type Handler = ({ keyCode, altKey }: { keyCode: number; altKey: boolean }) => false | void
+
+export default function useEventListener(eventName: 'keydown', handler: Handler, element?: HTMLElement) {
+  const windowEl = typeof window === 'undefined' ? undefined : window
   const eventEl = element ?? windowEl
+
   // Create a ref that stores handler
   const savedHandler = useRef()
 

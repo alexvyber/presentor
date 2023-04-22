@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors")
+const defaultTheme = require("tailwindcss/defaultTheme")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,6 +10,14 @@ module.exports = {
       fontFamily: {
         raleway: ['var(--raleway-font)', 'system-ui', 'sans-serif'],
       },
+
+      screens: {
+        "2xs": "384px",
+        xs: "512px",
+        base: "1142px",
+        ...defaultTheme.screens,
+      },
+
       fontSize: {
         '2xs': '0.65rem',
         xs: '0.75rem',

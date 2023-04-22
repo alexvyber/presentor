@@ -1,13 +1,15 @@
-import * as React from 'react'
+import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/design'
 import classNames from 'clsx'
 import { motion } from 'framer-motion'
 
-import { FADE_UP_ANIMATION_VARIANTS, FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/design'
+// import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/design'
 
-export const SlideWalletConnect = ({ className }) => {
-  const classes = classNames(className, 'SlideWalletConnect', 'container mx-auto max-w-screen-xl')
+export const SignMessage = () => {
+  const classes = classNames('SignMessage', 'container mx-auto max-w-screen-xl')
+
   return (
     <div className={classes}>
+      SignMessage
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -25,8 +27,8 @@ export const SlideWalletConnect = ({ className }) => {
           <div className="col-span-6 text-sm text-left flex flex-col justify-center">
             <div className="">
               <motion.div className="mx-auto mt-6 " variants={FADE_DOWN_ANIMATION_VARIANTS}>
-                <motion.h1 className="slide-title" variants={FADE_UP_ANIMATION_VARIANTS}>
-                  Wallet
+                <motion.h1 className="slide-title" variants={FADE_DOWN_ANIMATION_VARIANTS}>
+                  Sign Message
                 </motion.h1>
 
                 <p className="">
@@ -42,9 +44,12 @@ export const SlideWalletConnect = ({ className }) => {
             </div>
           </div>
           <div className="col-span-6 items-center flex flex-col justify-center">
-            <motion.div className="mx-auto mt-6 " variants={FADE_UP_ANIMATION_VARIANTS}>
-              asdf
+            <motion.div className="mx-auto mt-6 " variants={FADE_DOWN_ANIMATION_VARIANTS}>
+              <button className="btn btn-primary" onClick={() => {}}>
+                Sign Message
+              </button>
             </motion.div>
+            <div className="mt-10">asdf</div>
           </div>
         </div>
       </motion.div>
@@ -52,4 +57,4 @@ export const SlideWalletConnect = ({ className }) => {
   )
 }
 
-export default SlideWalletConnect
+export default SignMessage

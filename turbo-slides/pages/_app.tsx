@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
       {isMounted && (
         <CurrentSlideProvider>
           <ModeProvider>
-            <AnimatePresence exitBeforeEnter>
+            <AnimatePresence mode="wait">
               {/* <Head>
               <title>{SITE_TITLE}</title>
               <link rel="icon" href="/favicon.ico" />

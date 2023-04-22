@@ -7,8 +7,11 @@ import Cover from '@/components/presentation/Cover'
 import SpeakerNotes from '@/components/presentation/SpeakerNotes'
 import Step from '@/components/presentation/Step'
 import Steps from '@/components/presentation/Steps'
+
 import All from '@/components/slides'
+
 import { motion } from 'framer-motion'
+import { Container } from '../Container'
 
 const mdComponents = {
   h1: (props: React.ComponentProps<'h1'>) => <h1 {...props} />,
@@ -29,6 +32,7 @@ const mdComponents = {
 
   Cover,
   SlidePage,
+  Container,
   SpeakerNotes,
   Step,
   Steps,

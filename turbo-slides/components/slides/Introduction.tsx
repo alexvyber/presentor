@@ -1,37 +1,45 @@
-import * as React from 'react'
-import classNames from 'clsx'
-import { SITE_DESCRIPTION, SITE_NAME } from '@/lib/constants'
-import { DEPLOY_URL } from '@/lib/constants'
+import { SITE_NAME, SITE_DESCRIPTION, DEPLOY_URL } from '@/lib/constants'
 import { FADE_DOWN_ANIMATION_VARIANTS, FADE_UP_LG_ANIMATION_VARIANTS } from '@/lib/design'
+import clsx from 'clsx'
 import { motion } from 'framer-motion'
-import { Stripes } from '@/components/Stripes'
-import { SlideWrapper } from '@/components/SlideWrapper'
+import { Stripes } from '../Stripes'
 
 const stripesClasses = [
-  'ring ring-orange-200 dark:ring-orange-700',
-  'bg-orange-800',
-  'ring ring-orange-500 dark:ring-orange-900',
-  'bg-orange-700 dark:bg-orange-500',
-  'bg-orange-300 dark:bg-orange-400',
-  'bg-orange-500 dark:bg-orange-900',
-  'bg-orange-800 dark:bg-orange-800',
-  'bg-orange-500 dark:bg-orange-600',
-  'bg-orange-100 dark:bg-orange-700',
-  'ring ring-orange-500',
-  'bg-orange-300 dark:bg-orange-500',
+  'ring ring-teal-200 dark:ring-teal-700',
+  'bg-teal-800',
+  'ring ring-teal-500 dark:ring-teal-900',
+  'bg-teal-700 dark:bg-teal-500',
+  'bg-teal-300 dark:bg-teal-400',
+  'bg-teal-500 dark:bg-teal-900',
+  'bg-teal-800 dark:bg-teal-800',
+  'bg-teal-500 dark:bg-teal-600',
+  'bg-teal-100 dark:bg-teal-700',
+  'ring ring-teal-500',
+  'bg-teal-300 dark:bg-teal-500',
 ]
 
-export const Introduction = ({ className }) => {
-  return (
-    <SlideWrapper>
-      <Stripes stripesClasses={stripesClasses} backgroundColor="bg-orange-100/30 dark:bg-slate-900/70" />
-      <motion.div
-        variants={FADE_DOWN_ANIMATION_VARIANTS}
+export const Introduction = () => {
+  const classes = clsx('Introduction', 'container mx-auto max-w-screen-xl', 'flex flex-col text-left min-h-[70vh]')
 
-        // className={classNames(className, 'Introduction', 'container mx-auto max-w-screen-xl', 'flex flex-col text-left gap-10')}
-      >
+  return (
+    // <>{children} + AAAAAAAAAAAAAAAAAAAAAAA</>
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      animate="show"
+      viewport={{ once: true }}
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0.15,
+          },
+        },
+      }}>
+      <Stripes stripesClasses={stripesClasses} backgroundColor="bg-teal-50/50" />
+      <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className={classes}>
         <div className="mt-20">
-          <h3 className="font-bold font-raleway text-3xl sm:text-6xl leading-tight">{SITE_NAME}</h3>
+          <h3 className="font-bold font-raleway text-6xl leading-tight">{SITE_NAME}</h3>
           <h3 className="font-medium font-raleway text-3xl">{SITE_DESCRIPTION} </h3>
         </div>
         <div className="flex-1 flex flex-col flex-center justify-center">
@@ -65,16 +73,9 @@ export const Introduction = ({ className }) => {
         </div>
       </motion.div>
       <div className="absolute top-20 right-32">
-        <motion.div variants={FADE_UP_LG_ANIMATION_VARIANTS}>
-          <div className="w-[225%] max-w-[225%] -rotate-12">
-            {/* <BranchColorMode>
-              <img src="/icon-dark.svg" alt="TurboSlides by District Labs" className="w-full h-auto opacity-10" />
-              <img src="/district.svg" alt="TurboSlides by District Labs" className="w-full h-auto opacity-40" />
-            </BranchColorMode> */}
-          </div>
-        </motion.div>
+        <motion.div variants={FADE_UP_LG_ANIMATION_VARIANTS}>{/* <div className="w-[225%] max-w-[225%] -rotate-12">asdf</div> */}</motion.div>
       </div>
-    </SlideWrapper>
+    </motion.div>
   )
 }
 
