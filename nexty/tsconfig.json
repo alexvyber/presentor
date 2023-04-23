@@ -1,6 +1,10 @@
 {
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  },
   "compilerOptions": {
-    "target": "ES2021",
+    "baseUrl": ".",
+    "target": "es2021",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -14,15 +18,17 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "paths": {
-      "@/*": ["./src/*"]
+      "*": ["types/*.d.ts"],
+      "@/*": ["./*"],
+      "@/context/*": ["lib/context/*"],
+      "@/lib/*": ["lib/*"],
+      "@/actions/*": ["lib/actions/*"],
+      "@/hooks/*": ["lib/hooks/*"],
+      "@/layouts/*": ["components/layouts/*"],
+      "@/providers/*": ["components/providers/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js", "components/providers/RainbowKit.jsx"],
   "exclude": ["node_modules"]
 }

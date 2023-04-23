@@ -1,39 +1,36 @@
-const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/,
-  options: {
-    // If you use remark-gfm, you'll need to use next.config.mjs
-    // as the package is ESM only
-    // https://github.com/remarkjs/remark-gfm#install
-    remarkPlugins: [],
-    rehypePlugins: [],
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
-  },
-});
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const withMDX = require('@next/mdx')({
+  extension: /\.(md|mdx)$/,
+})
+module.exports = withMDX({
   reactStrictMode: true,
-  experimental: {
-    appDir: true,
+  typescript: {
+    ignoreBuildErrors: true,
   },
-
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
     remotePatterns: [
-      // {
-      //   protocol: "https",
-      //   hostname: "pbs.twimg.com",
-      //   port: "",
-      //   pathname: "/**",
-      // },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
-
-  // Configure pageExtensions to include md and mdx
-  pageExtensions: ["ts", "tsx", "md", "mdx"],
-
-  // Optionally, add any other Next.js config below
-  reactStrictMode: true,
-};
-
-module.exports = withMDX(nextConfig);
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      resourceQuery: /icon/,
+      use: ['@svgr/webpack'],
+    })
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      resourceQuery: { not: [/icon/] },
+      loader: 'next-image-loader',
+      options: { assetPrefix: '' },
+    })
+    return config
+  },
+})
