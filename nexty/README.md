@@ -124,7 +124,7 @@ You can pass new components, or swap HTML elements inside the `mdComponents` obj
 const mdComponents = {
   h1: (props) => <h1 {...props} />,
   CustomButton,
-};
+}
 ```
 
 ## Available Components

@@ -1,14 +1,50 @@
 const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
+const fontSizes = {
+  xs: ['0.75rem', { lineHeight: '1rem' }],
+  sm: ['0.875rem', { lineHeight: '1.25rem' }],
+  base: ['1rem', { lineHeight: '1.5rem' }],
+  lg: ['1.125rem', { lineHeight: '1.75rem' }],
+  xl: ['1.25rem', { lineHeight: '1.75rem' }],
+  '2xl': ['1.5rem', { lineHeight: '2rem' }],
+  '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+  '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+  '5xl': ['3rem', { lineHeight: '1' }],
+  '6xl': ['3.75rem', { lineHeight: '1' }],
+  '7xl': ['4.5rem', { lineHeight: '1' }],
+  '8xl': ['6rem', { lineHeight: '1' }],
+  '9xl': ['8rem', { lineHeight: '1' }],
+  '10xl': ['10rem', { lineHeight: '1' }],
+  '11xl': ['12rem', { lineHeight: '1' }],
+  '12xl': ['14rem', { lineHeight: '1' }],
+  '13xl': ['16rem', { lineHeight: '1' }],
+}
+
+const newFontSizes = []
+const arrFontSizes = Array.from(Object.entries(fontSizes), (value) => value)
+
+Object.entries(fontSizes).map((_entry, index) => {
+  const step = 2
+
+  if (index + 1 + step <= arrFontSizes.length) {
+    newFontSizes.push([arrFontSizes[index][0], arrFontSizes[index + step][1]])
+  }
+})
+
+const fontSize = Object.fromEntries(newFontSizes)
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
+  plugins: [require('@tailwindcss/aspect-ratio'), require('@tailwindcss/typography')],
   content: ['./pages/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontSize,
       fontFamily: {
         raleway: ['var(--raleway-font)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-custom)', ...defaultTheme.fontFamily.sans],
       },
 
       listStyleType: {
@@ -61,8 +97,8 @@ module.exports = {
       },
       colors: {
         primary: {
-          ...colors.amber,
-          DEFAULT: colors.amber[400],
+          ...colors.orange,
+          DEFAULT: colors.orange[300],
         },
         // gray: {
         //   100: '#f7fafc',
@@ -164,6 +200,8 @@ module.exports = {
       //       },
 
       //       p: {
+      //         fontSize: theme('fontSize.xl')[0],
+      //         color: "red",
       //         marginTop: theme('spacing.4'),
       //         marginBottom: theme('spacing.4'),
       //       },
@@ -260,7 +298,7 @@ module.exports = {
       //       // Lists
       //       ul: {
       //         listStyleType: 'disc',
-      //         padding: theme('spacing.10'),
+      //         padding: theme('spacing.20'),
       //       },
 
       //       ol: {
