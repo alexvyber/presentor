@@ -1,25 +1,228 @@
 <SlidePage>
 
-<SignMessage />
+<Stripes
+  className={''}
+  stripesClasses={[
+    'ring ring-teal-200 dark:ring-teal-700',
+    'bg-teal-800',
+    'ring ring-teal-500 dark:ring-teal-900',
+    'bg-teal-700 dark:bg-teal-500',
+    'bg-teal-300 dark:bg-teal-400',
+    'bg-teal-500 dark:bg-teal-900',
+    'bg-teal-800 dark:bg-teal-800',
+    'bg-teal-500 dark:bg-teal-600',
+    'bg-teal-100 dark:bg-teal-700',
+    'ring ring-teal-500',
+    'bg-teal-300 dark:bg-teal-500',
+  ]}
+  backgroundColor="bg-teal-50/50"
+/>
+
+<Container className="py-12 prose">
+
+<div className=" bg-teal-300/5 backdrop-blur-lg ring-2 ring-teal-900/10 px-5  py-10 rounded-2xl">
+
+### Структура
+
+- **Маркетинговые сайты**
+  - Причины работы только с ними в первые 3 месяца
+- **Стак**
+  - Какой стак используется и почему
+  - TailwindCSS
+  - Next.JS / Astro
+  - WordPress / Strapi.JS
+  - TypeScript
+  - GraphQL
+- **Работа с продажами и продажниками**
+- **CRM**
+- **Мои хотелки**
+
+</div>
+
+</Container>
 
 ---
 
-<Container className="py-12">
+<Container className="py-12 prose">
 
-# NextJS MDX Deck
+# Маркетинговые сайты
 
-## NextJS MDX Deck
+3 месяца я занимюсь только разработкой маркетинговых сайтов.
 
-### NextJS MDX Deck
+Причиы:
 
-Create presentations using Next & React & MDX.
-**Create presentations using Next & React & MDX.**
-_Create presentations using Next & React & MDX._
-[asdfasdf](#)
+- Испытательный срок работает в обе стороны. Я могу также спокойно не продолжать работу через 3 месяца.
+- Продажа сайтов приносит деньги сразу, и это дает возможность разогнать мою ЗП.
+- Если я уйду после того, как сделаю набор маркетинговых, сайты продолжат работать и человек знающий JavaScript сможет вносить изменеия и добавлять фичи.
+- Все те же самые технологии, скорей всего, будут использоваться на всех проектах. Наработать опыт, код: стартеры и темплейты - помогает для работы с CRM.
 
-- asdf a
-- asdf a
-- asdf a
+Ключевой результат: **Через 3 месяца есть работающее направление, есть опыт и какие-то решения**
+
+</Container>
+
+---
+
+<Container className="py-12 prose">
+
+# Стак
+
+### JAMStack+ [](https://jamstack.org/)
+
+CMS:
+
+- WordPress | Headless WordPress + [GraphQL](https://www.wpgraphql.com/)
+- Strapi CMS + GraphQL
+
+Web:
+
+- [Next.JS](https://nextjs.org/)
+- [Astro.Build](https://astro.build/)
+- [TailwindCSS](https://tailwindcss.com/)
+
+</Container>
+
+---
+
+<Container className="py-12 prose">
+
+## Обоснование стака
+
+- У вас нет такой завязки на какой-то стак, от которой не уйти.
+  - Нет команды под конкретный стак
+  - Нет большой однородной код базы
+  - Нет большого количества ресурсов под конкретный стак: найм пайплайн, ресурсы обучения и т.д.
+  - В Новгорде одинаково почти нет разработчиков на любые технолгии.
+  - Нет заказчиков, которые диктуют используемые технологии
+- В любом случае придется нанимать, обучать и выращивать под себя.
+- Я знаю свой стак, и знаю его достаточно хорошо
+- У меня нет причин уходить с моего стака(востребован на рынке, универсален, эффективен)
+- Этот стак хорошо решает задачи, которые стоят перед вами _(возможно, лучше всех остальных)_
+
+</Container>
+
+---
+
+<Container className="py-12 prose">
+
+## CMS
+
+### WordPress
+
+**Когда все на WordPress**
+
+- themeforest - почти в любом кейсе выгоднее купить, чем писать самому. Пример: **[Salient](https://themenectar.com/salient/)** стоит 60$ можно продать за 600$+ много раз.
+- [roots.io](https://roots.io/) - у них много всего хорошего для разработки на вордпресс. (Когда надо много кастом код, но хочется стартовать с хорошей базы)
+  - [roots sage](https://roots.io/sage/) использует Tailwind
+
+**Когда WordPress "Headless"**
+
+[WP GraphQL](https://www.wpgraphql.com/) - превращает WordPress в GraphQL API
+
+</Container>
+
+---
+
+<Container className="py-12 prose">
+
+## CMS
+
+### Strapi
+
+- Strapi все Headless.
+- Очень хороший GraphQL API
+- Есть все, что надо для 95% ожидаемых кейсов
+- Намного проще вордпресса
+- Написано на Node. Для написания кастом кода используется JavaScript/TypeScript
+
+<br />
+<br />
+
+</Container>
+
+---
+
+<Container className="py-12 prose">
+
+## CMS
+
+### Зачем GraphQL?
+
+- Четкое разделение фронта и API
+- Четкие контракт между фронтом и API
+- В CMS мы легко создаем типы, которые будут потом использоваться на фронте
+
+</Container>
+
+---
+
+<Container className="py-12 prose">
+
+## WEB
+
+### Astro.build [](https://astro.build/)
+
+**Если это типичный маркетинговый сайт, то используется Astro.**
+
+Причины:
+
+- Простая штука
+- Тупо генерирует HTML.
+- Легко делать сайты, которые будут выбивать все 100 в гугле.
+- Есть непробиваемый и супер-удобный аргумент для клиентов.
+
+[Демо](https://pro.alexvyber.dev/)
+
+[Причины из официальной документации](https://docs.astro.build/en/concepts/why-astro/)
+
+![Tux, the Linux mascot](/top-media/astro-screen.png)
+
+</Container>
+
+---
+
+<Container className="py-12 prose">
+
+## WEB
+
+### Next.JS [](https://nextjs.org/)
+
+**Если нужен расширенный функционал, то используется Next.JS**
+
+Самый популярный фулл-стак фреймворк
+
+Есть невероятно большое количество готового и открытого качественного кода:
+
+- [ui.shadcn.com](https://ui.shadcn.com/)
+- [from vercel](https://vercel.com/templates?framework=next.js)
+
+Много качественных вещей, которые можно купить
+
+Если исползовать Vercel, то можно добиться очень крутых вещей в деплое.
+
+Я на Next пишу последний год почти каждый день 😉
+
+_Этот сайт сделан на Next_
+
+</Container>
+
+---
+
+<Container className="py-12 prose">
+
+## WEB
+
+### TailwindCSS [](https://tailwindcss.com/)
+
+С помощью TailwindСSS можно скопировать кусок HTML из проекта на WordPress
+Принципиально новый способ писать CSS.
+Супер-хорошо работает там, где надо двигаться быстро.
+
+Этот сайт использует Tailwind.
+Как и alexvyber.dev, как и почти все сайты, которые я сделал за последний год.
+
+Есть большое количество платных UI библиотек.
+
+Лучший пример: [Tailwind UI](https://tailwindui.com/components)
 
 </Container>
 
@@ -27,62 +230,20 @@ _Create presentations using Next & React & MDX._
 
 <Container className="py-12">
 
-1. Clone this project.
-1. Write some MDX.
-1. Export as [static app](https://nextjs.org/docs/advanced-features/static-html-export)
-1. ???
-1. Profit as a speaker 💰💰💰
+# Работа с продажами и продажниками
 
-<SpeakerNotes>
-    
-Private notes here.
+### Они должны быть уверены, что продают топовый продукт
 
-You can write an extremely long note and it'll still display inside of the presenter mode.
+- Им показывается, что сейчас сайты делаются хорошо
+  - сайты быстрые
+  - у них хороший дизайн
+  - они делаются быстро
+  - правки вносятся быстро и легко
+  - сайты будут хорошо сеошиться и приносить клиентов
+- Они понимают, какие проблемы сайты решаеют и как
+- Четко понимают основные аспекты изготовления сайта и того, как они работают
 
-# Even Markdown!
-
-- Just
-- do
-- it
-
-</SpeakerNotes>
-
-</Container>
-
----
-
-> Inscrutable icons litter the face of the devices even though the research
-> community has long demonstrated that people cannot remember the meaning of
-> more than a small number of icons […] Who can remember what each icon
-> means? Not me.
->
-> <cite>Don Norman</cite>
-
----
-
-<Container className="py-12">
-
-# 🤫
-
-</Container>
-
-<Container className="py-12">
-
-## Beautiful Code Examples
-
-```jsx
-<button
-  style={{
-    backgroundColor: 'transparent',
-    color: '#FFF',
-    border: '3px solid #FFF',
-    borderRadius: '6px',
-    padding: '1.5em 2em',
-    fontSize: '1em',
-  }}>
-  Button with JSX
-</button>
-```
+Ключевой результат: **продажники верят в продукт и с энтузиазмом его продают и _не стесняются нормальный ценник выставлять_ 😊.**
 
 </Container>
 
@@ -90,13 +251,9 @@ You can write an extremely long note and it'll still display inside of the prese
 
 <Container className="py-12">
 
-## Slides are written in MDX!
+# CRM и другие проекты
 
-And code is highlighted using `react-syntax-highlighter`.
-
-```js
-const variable = someFunction()
-```
+Все решения и договоренности будут делаться через 3 месяца
 
 </Container>
 
@@ -104,13 +261,19 @@ const variable = someFunction()
 
 <Container className="py-12">
 
-<Steps>
-  <Step>Something</Step>
-  <Step>happens</Step>
-  <Step>one</Step>
-  <Step>by</Step>
-  <Step>one</Step>
-</Steps>
+### Хотелки
+
+- Я работаю 10 часов:
+  - Начинаю в 7:00(Соотвественно у меня должен быть доступ в офис в 7:00). Могу позже, но не позже 9.
+  - Заканчиваю в 17:00
+  - Если не форс-мажор, то ничто меня не может задержать после 17:00
+  - С 7:00 до 11:00 я пишу код. Меня никто не отвлекает. Я не занимаюсь ничем, кроме чего-то срочного(деплой в проде упал и т.п.)
+- Четкий и прозрачный процент. В любой момент я могу за 5 минут посчитать, сколько я заработал в текущий период.
+- У меня есть четкие запросы на то, какие должны быть комп, клава, монитор.
+- Я работаю на линуксе.
+- Каждый месяц у IT отдела есть бюджет в 500$ на покупку стафа. Это может быть обучение, код и т.д.
+- Каждые 3 месяца у меня есть одна неделя типа отпуск(2 пары выходных + 5 рабочих = 9 дней)
+- Каждую неделю у меня есть статистика/инфа/обратная связь от отдела продаж. Скрипты и т.д. С какими возражениями сталкиваютися
 
 </Container>
 
@@ -118,9 +281,87 @@ const variable = someFunction()
 
 <Container className="py-12">
 
-# Goodbye 👋
+Я выхожу на работу после майских.
 
-### 🦅
+Все время до выхода на связи.
+
+Могу в каком-то виде участвовать продажах.
+
+</Container>
+
+---
+
+<Container className="py-12">
+
+### Сапоги для сапожника
+
+До выхода на работу я могу сделать сайт для топ-медиа за деньги, которые получу вместе с первой ЗП.
+
+</Container>
+
+---
+
+<Container className="py-12">
+
+**Questions**
+
+- what infra used to deploy now?
+- how communication goes?
+- What integrations are being used now? SMS, email etc?
+
+**Implementation Ideas**
+
+- **genstuff**
+- use GraphQL unless have reasons not to.
+- buying TailwindUI, flowbite, themeforest, etc
+- shared TS config as npm package
+- use Vite when it's appropriate. Vitest, when unit tests are necessary
+- using ansible for sharing envirenments between linux machines
+- common .editorconfig
+- code style guidelines. Minimal shared standart
+- Serverless and edge? Is it possible in our conditions?
+- decide between Redux and Zustand for state managment
+- autoanimate when simple animations is needed
+- plausible instead of Google and Yandex?
+- partytown from builderIO for async anlytics load
+- next + Strapi starter in monorepo. Starting with that kind of template anyway. Even if we'll not be using Strapi.
+- Extract entity functions
+- gen env(some logic to gen env files programmatically)
+- use vercel
+- use timeweb or other vds/vps
+- Full API-first development
+- Front is being developed when Strapi instance is deployed to the prod
+- use PlanetScale or vitess bo oursells
+- suppabase? Self-hosted?
+- Minimal CI/CD
+- Avoid docker as logn as possible. Use podman when need containers
+- Strapi config sync | config sync for all solutions
+- DB population with scripts
+- caddy as proxy by default
+- validate env
+- zod validation
+- use cvax
+- use ladle
+- build custom UI lib
+- prettier and eslint configs as npm package
+- no default exports
+- mobile first
+- kinda atomic design
+- container presentation pattern
+- no pixel units allowed
+- no containers during development
+- new strapi instance for each project
+- generate copy content
+- use google sheets and docs to work with content and feed it into cms
+- use Responsively or Polypane
+
+</Container>
+
+---
+
+<Container className="py-12">
+
+# The End 👋
 
 </Container>
 
