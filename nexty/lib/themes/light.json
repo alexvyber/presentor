@@ -218,14 +218,7 @@
     },
     {
       "name": "Fallback keywords",
-      "scope": [
-        "storage.type.ts",
-        "keyword",
-        "keyword.other",
-        "keyword.control",
-        "storage.type",
-        "storage.modifier"
-      ],
+      "scope": ["storage.type.ts", "keyword", "keyword.other", "keyword.control", "storage.type", "storage.modifier"],
       "settings": {
         "foreground": "#0008"
       }
@@ -297,11 +290,7 @@
     },
     {
       "name": "Fallback function calls",
-      "scope": [
-        "meta.function-call entity.name.function",
-        "meta.function-call support.function",
-        "meta.function.call entity.name.function"
-      ],
+      "scope": ["meta.function-call entity.name.function", "meta.function-call support.function", "meta.function.call entity.name.function"],
       "settings": {
         "foreground": "#000",
         "fontStyle": ""
@@ -316,11 +305,7 @@
     },
     {
       "name": "Fallback Properties & func arguments",
-      "scope": [
-        "variable.other.property",
-        "entity.name.goto-label",
-        "entity.name.variable.parameter"
-      ],
+      "scope": ["variable.other.property", "entity.name.goto-label", "entity.name.variable.parameter"],
       "settings": {
         "foreground": "#000"
       }
@@ -340,10 +325,7 @@
     },
     {
       "name": "HTML Tags",
-      "scope": [
-        "meta.tag entity.name.tag.html",
-        "entity.name.tag.template.html"
-      ],
+      "scope": ["meta.tag entity.name.tag.html", "entity.name.tag.template.html"],
       "settings": {
         "foreground": "#000"
       }
