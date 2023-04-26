@@ -1,4 +1,4 @@
-import { IResolvers } from "mercurius";
+import { IResolvers } from "mercurius"
 
 export const Mutation: IResolvers["Mutation"] = {
   slideChange(root, { presentationId, slide }, { pubsub }) {
@@ -9,8 +9,8 @@ export const Mutation: IResolvers["Mutation"] = {
           slide,
         },
       },
-    });
+    })
 
-    return true;
+    return true
   },
-};
+}
