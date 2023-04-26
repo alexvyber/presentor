@@ -1,3 +1,3 @@
-export default function AboutPage({ children }: React.PropsWithChildren) {
+export function AboutPage({ children }: React.PropsWithChildren) {
   return <div>{children}</div>
 }

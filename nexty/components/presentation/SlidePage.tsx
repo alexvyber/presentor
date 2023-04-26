@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import Slide from '@/components/presentation/Slide'
+import { Slide } from '@/components/presentation/Slide'
 
 import useEventListener from '@/hooks/useEventListener'
 
@@ -12,7 +12,7 @@ import { Button } from '../katzen/ui/button'
 
 import { useMutation, useSubscription } from 'urql'
 
-const newMessages = `
+const newMessages = `#graphql
 subscription {
   slideChanged(presentationId: "_____") {
     slide
@@ -20,7 +20,7 @@ subscription {
 }
 `
 
-const UpdateTodo = `
+const UpdateTodo = `#graphql
   mutation ($slide: Int!) {
     slideChange(presentationId: "_____", slide: $slide )
   }
@@ -36,7 +36,7 @@ const handleSubscription = (slides = [], response) => {
 // import { useTotalPages } from '@/context/TotalPagesContext'
 // import { Storage } from '@/hooks/useStorage'
 
-export default function SlidePage({ children, next }: React.PropsWithChildren & { next: number }) {
+export function SlidePage({ children, next }: React.PropsWithChildren & { next: number }) {
   const { currentSlide, setSlide, steps, currentStep, setCurrentStep, clearSteps } = useCurrentSlide()
 
   const [{ data }] = useSubscription({ query: newMessages }, handleSubscription)

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useCurrentSlide } from '@/lib/context/CurrentSlideContext'
 
@@ -31,5 +31,3 @@ export const Step = ({ children, order, duration = 0.5 }: React.PropsWithChildre
     </motion.div>
   )
 }
-
-export default Step
