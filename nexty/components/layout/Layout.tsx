@@ -5,12 +5,12 @@ import { APP_CONFIG, AUTHOR_IMAGE_URL, AUTHOR_NAME, AUTHOR_URL, PRESENTATION_DAT
 import { SiteHeader } from '../katzen/site-header'
 import { Container } from '../Container'
 
-export const Layout = ({ children }: React.PropsWithChildren) => (
-  <>
+export const Layout = ({ children, className }: React.ComponentProps<'div'>) => (
+  <div className={className}>
     <SiteHeader />
 
     {/* <Header name={SITE_NAME} title={SITE_TAGLINE} date={PRESENTATION_DATE} url={APP_CONFIG.twitter} /> */}
     <div>{children}</div>
     {/* <Footer authorName={AUTHOR_NAME} authorUrl={AUTHOR_URL} authorImgUrl={AUTHOR_IMAGE_URL} /> */}
-  </>
+  </div>
 )
