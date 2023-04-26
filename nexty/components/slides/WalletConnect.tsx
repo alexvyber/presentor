@@ -1,12 +1,9 @@
-import classNames from 'clsx'
-
 import { FADE_UP_ANIMATION_VARIANTS, FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/design'
 import { motion } from 'framer-motion'
 
 export const SlideWalletConnect = () => {
-  const classes = classNames('SlideWalletConnect', 'container mx-auto max-w-screen-xl')
   return (
-    <div className={classes}>
+    <div className={'container mx-auto max-w-screen-xl'}>
       <motion.div
         initial="hidden"
         whileInView="show"

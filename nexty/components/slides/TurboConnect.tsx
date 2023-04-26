@@ -1,11 +1,10 @@
 import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/design'
-import classNames from 'clsx'
+
 import { motion } from 'framer-motion'
 
 export const TurboConnect = () => {
-  const classes = classNames('TurboConnect', 'container mx-auto max-w-screen-xl')
   return (
-    <div className={classes}>
+    <div className={'container mx-auto max-w-screen-xl'}>
       <motion.div
         initial="hidden"
         whileInView="show"

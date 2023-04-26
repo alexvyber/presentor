@@ -1,9 +1,7 @@
 import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/design'
-import classNames from 'clsx'
+
 import { motion } from 'framer-motion'
 import { Container } from '../Container'
-
-// import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/design'
 
 export const SignMessage = () => {
   return (

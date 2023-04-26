@@ -22,7 +22,7 @@ const stripesClasses = [
 export const Introduction = () => {
   return (
     <>
-      <Stripes stripesClasses={stripesClasses} backgroundColor="bg-teal-50/50" />
+      <Stripes className={''} stripesClasses={stripesClasses} backgroundColor="bg-teal-50/50" />
       <Container>
         <motion.div
           initial="hidden"
