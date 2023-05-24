@@ -128,8 +128,8 @@ dependencies:
     specifier: 0.3.1
     version: 0.3.1(esbuild@0.17.18)
   cvax:
-    specifier: ^0.2.5
-    version: 0.2.5(typescript@5.0.4)
+    specifier: ^0.4.0
+    version: 0.4.0(typescript@5.0.4)
   date-fns:
     specifier: ^2.29.3
     version: 2.29.3
@@ -6233,8 +6233,8 @@ packages:
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
 
-  /cvax@0.2.5(typescript@5.0.4):
-    resolution: {integrity: sha512-ZYSwKliSEugn7zUEJCFQwVJ/itCoL/rX4AvKx58Zul2NP0VxtsddJPSrMzC79vFtG7nhxl7NuN2/qT7KEWPLlw==}
+  /cvax@0.4.0(typescript@5.0.4):
+    resolution: {integrity: sha512-G7zDEGfx7WI2qRdZHAokIB1QlEVSbKJ+jkzZIgwk6Uhzu7SCUh27XW5oRsJ3lz8hDqBX3K4T8Xsn3zcdJdrvSg==}
     peerDependencies:
       typescript: '>= 4.5.5 || >= 5.0.0 || >= 5.0.0-beta'
     peerDependenciesMeta:
