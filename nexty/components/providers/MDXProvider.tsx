@@ -10,13 +10,10 @@ import { Steps } from '@/components/presentation/Steps'
 
 import { slides } from '@/components/slides'
 
-
 import { motion } from 'framer-motion'
 import { Container } from '../Container'
 import Link, { LinkProps } from 'next/link'
 import { Stripes } from '../Stripes'
-
-console.log("🚀 ~ slides:", slides)
 
 const mdComponents = {
   h1: (props: React.ComponentProps<'h1'>) => (
@@ -29,7 +26,7 @@ const mdComponents = {
 
   a: (props: LinkProps) => <Link {...props} className="text-primary-400 hover:underline after:content-['↗'] " />,
 
-  p: (props: React.ComponentProps<'p'>) => <p {...props} className="text-lg mt-4 " />,
+  // p: (props: React.ComponentProps<'p'>) => <p {...props} className="text-lg mt-4 " />,
 
   strong: (props: React.ComponentProps<'strong'>) => <strong {...props} className="font-semibold" />,
 

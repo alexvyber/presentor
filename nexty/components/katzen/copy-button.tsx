@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { DropdownMenuTriggerProps } from '@radix-ui/react-dropdown-menu'
-import { NpmCommands } from 'types/unist'
+import { NpmCommands } from '@/types/unist'
 
 import { cn } from '@/lib/utils'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/katzen/ui/dropdown-menu'

@@ -3,7 +3,7 @@
 import * as React from 'react'
 import Image from 'next/image'
 import { useMDXComponent } from 'next-contentlayer/hooks'
-import { NpmCommands } from 'types/unist'
+import { NpmCommands } from '@/types/unist'
 
 import { cn } from '@/lib/utils'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/katzen/ui/accordion'
