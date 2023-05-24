@@ -1,9 +1,9 @@
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+// import Header from '@/components/layout/Header'
+// import Footer from '@/components/layout/Footer'
 
-import { APP_CONFIG, AUTHOR_IMAGE_URL, AUTHOR_NAME, AUTHOR_URL, PRESENTATION_DATE, SITE_NAME, SITE_TAGLINE, SITE_TITLE } from '@/lib/constants'
+// import { APP_CONFIG, AUTHOR_IMAGE_URL, AUTHOR_NAME, AUTHOR_URL, PRESENTATION_DATE, SITE_NAME, SITE_TAGLINE, SITE_TITLE } from '@/lib/constants'
 import { SiteHeader } from '../katzen/site-header'
-import { Container } from '../Container'
+// import { Container } from '../Container'
 
 export const Layout = ({ children, className }: React.ComponentProps<'div'>) => (
   <div className={className}>

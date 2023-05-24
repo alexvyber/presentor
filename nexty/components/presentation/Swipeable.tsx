@@ -1,6 +1,6 @@
-import { useSwipeable } from 'react-swipeable'
+import { SwipeableProps, useSwipeable } from 'react-swipeable'
 
-export const Swipeable = ({ children, ...props }: React.ComponentProps<'div'>) => {
+export const Swipeable = ({ children, ...props }: SwipeableProps & React.PropsWithChildren) => {
   const handlers = useSwipeable(props)
 
   return <div {...handlers}>{children}</div>

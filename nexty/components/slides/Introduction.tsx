@@ -1,28 +1,68 @@
 import { FADE_DOWN_ANIMATION_VARIANTS, FADE_UP_LG_ANIMATION_VARIANTS } from '@/lib/design'
 
 import { motion } from 'framer-motion'
-import { Stripes } from '../Stripes'
+import {
+  // Stripes,
+  StripesProps,
+} from '../Stripes'
 import { Container } from '../Container'
 import { Button } from '../katzen/ui/button'
 
-const stripesClasses = [
-  'ring ring-teal-200 dark:ring-teal-700',
-  'bg-teal-800',
-  'ring ring-teal-500 dark:ring-teal-900',
-  'bg-teal-700 dark:bg-teal-500',
-  'bg-teal-300 dark:bg-teal-400',
-  'bg-teal-500 dark:bg-teal-900',
-  'bg-teal-800 dark:bg-teal-800',
-  'bg-teal-500 dark:bg-teal-600',
-  'bg-teal-100 dark:bg-teal-700',
-  'ring ring-teal-500',
-  'bg-teal-300 dark:bg-teal-500',
-]
+const stripesClasses = {
+  'bg-orange-100': {
+    gridRow: '5',
+    gridColumn: 'viewport-start/span 3',
+  },
+  'ring ring-orange-200 dark:ring-orange-700': {
+    gridRow: '-9',
+    gridColumn: 'span 10/0',
+  },
+  'bg-orange-800': {
+    gridRow: '-7',
+    gridColumn: 'span 5/8',
+  },
+  'ring ring-orange-500 dark:ring-orange-900': {
+    gridRow: '-6',
+    gridColumn: 'viewport-start/span 10',
+  },
+  'bg-orange-700 dark:bg-orange-500': {
+    gridRow: '-5',
+    gridColumn: 'span 7/9',
+  },
+  'bg-orange-300 dark:bg-orange-400': {
+    gridRow: '-5',
+    gridColumn: 'span 5/7',
+  },
+  'bg-orange-500 dark:bg-orange-900': {
+    gridRow: '-10',
+    gridColumn: 'span 4 / viewport-end',
+  },
+  'bg-orange-800 dark:bg-orange-800': {
+    gridRow: '-9',
+    gridColumn: 'span 5 / viewport-end',
+  },
+  'bg-orange-500 dark:bg-orange-600': {
+    gridRow: '-4',
+    gridColumn: 'span 7 / viewport-end',
+  },
+  'bg-orange-100 dark:bg-orange-700': {
+    gridRow: '-3',
+    gridColumn: 'span 5/-4',
+  },
+  'ring ring-orange-500': {
+    gridRow: '-2',
+    gridColumn: 'span 5 / viewport-end',
+  },
+  'bg-orange-300 dark:bg-orange-500': {
+    gridRow: '7',
+    gridColumn: 'span 3/5',
+  },
+} satisfies StripesProps['stripesClasses']
 
 export const Introduction = () => {
   return (
     <>
-      <Stripes className={''} stripesClasses={stripesClasses} backgroundColor="bg-teal-50/50" />
+      {/* <Stripes className={''} stripesClasses={stripesClasses} backgroundColor="bg-orange-50" /> */}
       <Container>
         <motion.div
           initial="hidden"

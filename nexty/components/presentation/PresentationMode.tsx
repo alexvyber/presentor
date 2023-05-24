@@ -2,8 +2,8 @@ import { PRESENTATION_MODES } from '@/lib/constants'
 
 export default function PresentationMode({
   mode,
-  notes,
-  currentSlide,
+  // notes,
+  // currentSlide,
   children,
 }: React.PropsWithChildren & { mode: any; notes: any; currentSlide: any }) {
   if (mode === PRESENTATION_MODES.SPEAKER) {
