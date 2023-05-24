@@ -1,41 +1,36 @@
-import clsx from 'clsx'
+import { CSSProperties } from 'react'
 import stripe from './stripe.module.css'
-import stripes from './stripes.module.css'
-// import stripes from "./pink.module.css"
+import { cx } from 'cvax'
 
-type Props = {
+export type StripesProps = {
   className?: string
-  stripesClasses: string[]
+  stripesClasses: Record<string, CSSProperties>
   backgroundColor: string
 }
 
-// const stripesClasses = [
-//   "ring ring-orange-200 dark:ring-orange-700",
-//   "bg-orange-800",
-//   "ring ring-orange-500 dark:ring-orange-900",
-//   "bg-orange-700 dark:bg-orange-500",
-//   "bg-orange-300 dark:bg-orange-400",
-//   "bg-orange-500 dark:bg-orange-900",
-//   "bg-orange-800 dark:bg-orange-800",
-//   "bg-orange-500 dark:bg-orange-600",
-//   "bg-orange-100 dark:bg-orange-700",
-//   "ring ring-orange-500",
-//   "bg-orange-300 dark:bg-orange-500",
-// ]
+export const Stripes = ({ className, stripesClasses, backgroundColor }: StripesProps) => (
+  <div
+    className={cx(
+      stripe['StripeGrid'],
+      className,
+      'h-[1000px] pointer-events-none -z-10 absolute my-auto -mx-4 top-0 lg:w-full w-[calc(100%+1rem)] lg:m-auto'
+    )}>
+    <div
+      style={{
+        gridTemplateColumns: '1fr',
+        minWidth: '0',
+      }}>
+      <div className={cx(stripe['gridy'], 'grid absolute w-full h-[100%] -top-48 -skew-y-[10deg]')}>
+        <div className={cx('row-span-full -z-10', backgroundColor)} style={{ gridColumn: '1/-1' }}></div>
+      </div>
+    </div>
 
-export const Stripes = ({ className, stripesClasses, backgroundColor }: Props) => (
-  <div className={clsx(stripe['StripeGrid'], className, 'h-[1000px]  overflow-hidden')}>
-    <aside className={stripe['backgroundContainer']}>
-      <section className={stripe['grid']}>
-        <main className={clsx(stripe['background'], backgroundColor)}></main>
-      </section>
-    </aside>
-    <main className={stripe['stripeContainer']}>
-      <section className={stripe['grid']}>
-        {stripesClasses.map((item, index) => (
-          <div key={index} className={clsx(stripes['stripe'], item)}></div>
+    <div className={cx('flex justify-end absolute flex h-full w-full  flex-col items-center align-middle -skew-y-[10deg] overflow-hidden')}>
+      <div className={cx(stripe['gridy'], 'grid absolute w-full h-[100%]')}>
+        {Object.entries(stripesClasses).map(([item, style], index) => (
+          <div key={index} className={cx('rounded-lg', item)} style={style}></div>
         ))}
-      </section>
-    </main>
+      </div>
+    </div>
   </div>
 )
