@@ -26,9 +26,10 @@
       "@/actions/*": ["lib/actions/*"],
       "@/hooks/*": ["lib/hooks/*"],
       "@/layouts/*": ["components/layouts/*"],
+      "@/components/*": ["components/*"],
       "@/providers/*": ["components/providers/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js", "components/providers/RainbowKit.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.cjs", "components/providers/RainbowKit.jsx"],
   "exclude": ["node_modules"]
 }
