@@ -20,13 +20,14 @@ const mdComponents = {
     <h1 {...props} className="text-3xl break-all sm:break-normal xs:text-5xl sm:text-6xl mb-8 font-semibold" />
   ),
 
-  h2: (props: React.ComponentProps<'h2'>) => <h2 {...props} className="text-2xl xs:text-4xl sm:text-4xl  mb-6 font-semibold" />,
+  // h2: (props: React.ComponentProps<'h2'>) => <h2 {...props} className="text-2xl xs:text-4xl sm:text-4xl  mb-6 font-semibold" />,
+  h2: (props: React.ComponentProps<'h2'>) => <h2 {...props} className="text-4xl   mb-6 font-bold text-blue-500" />,
 
   h3: (props: React.ComponentProps<'h3'>) => <h3 {...props} className="text-xl sm:text-2xl mb-4 font-semibold" />,
 
   a: (props: LinkProps) => <Link {...props} className="text-primary-400 hover:underline after:content-['↗'] " />,
 
-  // p: (props: React.ComponentProps<'p'>) => <p {...props} className="text-lg mt-4 " />,
+  p: (props: React.ComponentProps<'p'>) => <p {...props} className="text-lg mt-4 " />,
 
   strong: (props: React.ComponentProps<'strong'>) => <strong {...props} className="font-semibold" />,
 

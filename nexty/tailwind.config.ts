@@ -1,13 +1,14 @@
+import type { Config } from 'tailwindcss/types/config'
+
 import colors from 'tailwindcss/colors'
 import defaultTheme from 'tailwindcss/defaultTheme'
-import type { Config } from 'tailwindcss/types/config'
 
 import { fontSizes } from './config/tailwind/tailwind.fontsizes'
 import { typography } from './config/tailwind/tailwind.typography'
+import { shiftFontSizes, getSpacingRange } from './config/tailwind/helpers'
 
 import typographyPlugin from '@tailwindcss/typography'
 import aspectRatioPlugin from '@tailwindcss/aspect-ratio'
-import { shiftFontSizes, getSpacingRange } from './config/tailwind/helpers'
 
 export default {
   darkMode: 'class',
@@ -15,10 +16,10 @@ export default {
   content: ['./pages/**/*.{tsx,mdx}', './components/**/*.{ts,tsx}'],
 
   theme: {
-    typography,
-
     extend: {
       fontSize: shiftFontSizes(fontSizes, 0),
+
+      typography,
 
       fontFamily: {
         // raleway: ['var(--raleway-font)', 'system-ui', 'sans-serif'],

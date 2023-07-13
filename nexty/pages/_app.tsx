@@ -46,12 +46,11 @@ export default function App({ Component, pageProps }) {
 
   return (
     <Provider value={client}>
-      <MDXProvider>
-        {isMounted && (
-          <CurrentSlideProvider>
-            <ModeProvider>
-              <AnimatePresence mode="wait">
-                {/* <Head>
+      {isMounted && (
+        <CurrentSlideProvider>
+          <ModeProvider>
+            <AnimatePresence mode="wait">
+              {/* <Head>
               <title>{SITE_TITLE}</title>
               <link rel="icon" href="/favicon.ico" />
               <link
@@ -59,14 +58,15 @@ export default function App({ Component, pageProps }) {
                 rel="stylesheet"
               />
             </Head> */}
-                <Layout className={`font-sans`}>
+              <Layout className={`font-sans`}>
+                <MDXProvider>
                   <Component {...pageProps} />
-                </Layout>
-              </AnimatePresence>
-            </ModeProvider>
-          </CurrentSlideProvider>
-        )}
-      </MDXProvider>
+                </MDXProvider>
+              </Layout>
+            </AnimatePresence>
+          </ModeProvider>
+        </CurrentSlideProvider>
+      )}
     </Provider>
   )
 }

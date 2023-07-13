@@ -3,10 +3,13 @@ const withMDX = require('@next/mdx')({
 })
 module.exports = withMDX({
   reactStrictMode: true,
+  
   typescript: {
     ignoreBuildErrors: true,
   },
+  
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  
   images: {
     remotePatterns: [
       {
@@ -17,6 +20,7 @@ module.exports = withMDX({
       },
     ],
   },
+
   webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
     config.module.rules.push({
       test: /\.svg$/i,
@@ -24,6 +28,7 @@ module.exports = withMDX({
       resourceQuery: /icon/,
       use: ['@svgr/webpack'],
     })
+    
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
@@ -31,6 +36,7 @@ module.exports = withMDX({
       loader: 'next-image-loader',
       options: { assetPrefix: '' },
     })
+
     return config
   },
 })
