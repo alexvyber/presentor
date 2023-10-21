@@ -17,11 +17,12 @@ import { WebSocket } from 'ws'
 
 const wsClient = createClient({
   webSocketImpl: WebSocket,
-  url: 'ws://localhost:5000/graphql',
+  url: 'wss://pres.alexvyber.dev/backend/graphql',
 })
+// https://presentor.alexvyber.dev/backend/graphql
 
 const client = new Client({
-  url: 'http://localhost:5000/graphql',
+  url: 'https://pres.alexvyber.dev/backend/graphql',
   exchanges: [
     cacheExchange,
     fetchExchange,
